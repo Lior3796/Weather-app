@@ -12,7 +12,7 @@ export const Navbar = () => {
             <ToggleTheme />
             <ul>
                 <li>
-                    <Link to="/Weather"> Weather </Link>
+                    <Link to="/"> Weather </Link>
                 </li>
                 <li>
                     <Link to="/favorites"> Favorites </Link>
