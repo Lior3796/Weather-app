@@ -12,6 +12,19 @@
 	flex-wrap: wrap;
 }
 
+@mixin headers {
+	width: 100%;
+	text-align: left;
+	font-weight: 700;
+	line-height: 0.8;
+	background-size: 600%;
+	-webkit-background-clip: text;
+	color: transparent;
+	background-position: right;
+	background-image: linear-gradient(45deg, grey, black);
+	animation: backgroundAnimation 5s 1s infinite alternate;
+}
+
 @mixin stickyNav {
 	position: absolute;
 	top: 0;

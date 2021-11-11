@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getCityList, getCityWeather, getDailyForecasts } from '../../service/service';
 import { AutoComplete } from '../autoComplete/AutoComplete';
 import { CardWrapper } from '../card/Card';
-
+import { Header } from '../header/Header';
 export const Search = () => {
     console.log(process.env.REACT_APP_API_KEY);
     const [chosenCity, setChosenCity] = useState('Tel aviv');
@@ -35,7 +35,7 @@ export const Search = () => {
     return (
         <div className="search-container">
             <div>
-                <h3>{favoriteCity.LocalizedName}</h3>
+                <Header favoriteCity={favoriteCity} />
                 <div className="search-bar">
                     <input type="text" onChange={(e) => { setChosenCity(e.target.value) }} />
                     <input type="submit" onClick={() => weatherHandler()} value="search" />
