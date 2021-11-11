@@ -24,4 +24,10 @@ nav {
 			margin: 0.5rem;
 		}
 	}
+	.toggle-container-dark {
+		@include dark;
+	}
+	.toggle-container-light {
+		@include light;
+	}
 }
