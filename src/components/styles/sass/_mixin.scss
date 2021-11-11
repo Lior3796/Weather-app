@@ -1,0 +1,54 @@
+@mixin flex-center($dir: row, $ver-position: center, $horiz-position: center) {
+	display: flex;
+	justify-content: $ver-position;
+	align-items: $horiz-position;
+	flex-direction: $dir;
+}
+
+@mixin flex-scroll {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+@mixin stickyNav {
+	position: absolute;
+	top: 0;
+}
+// media query
+@mixin base {
+	@media (min-width: map-get($break-points,"base")) {
+		@content;
+	}
+}
+
+@mixin sm {
+	@media (min-width: map-get($break-points,"sm")) {
+		@content;
+	}
+}
+
+@mixin md {
+	@media (min-width: map-get($break-points,"md")) {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media (min-width: map-get($break-points,"lg")) {
+		@content;
+	}
+}
+
+@mixin xl {
+	@media (min-width: map-get($break-points,"xl")) {
+		@content;
+	}
+}
+
+@mixin bp($bp: 0) {
+	@media (min-width: $bp) {
+		@content;
+	}
+}

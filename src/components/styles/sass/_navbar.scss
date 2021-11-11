@@ -1,0 +1,27 @@
+nav {
+	@include stickyNav;
+	@include flex-center(row, space-around);
+	width: 100%;
+	z-index: 10;
+
+	@include base {
+		@include flex-center(row, space-around);
+		width: 100%;
+	}
+	@include sm {
+		@include flex-scroll;
+		width: 100%;
+	}
+	@include md {
+		@include flex-center(row, space-around);
+		width: 100%;
+	}
+
+	ul {
+		@include flex-center(row, space-around);
+		li {
+			text-decoration: none;
+			margin: 0.5rem;
+		}
+	}
+}
