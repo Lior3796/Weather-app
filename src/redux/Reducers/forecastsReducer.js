@@ -1,4 +1,4 @@
-import { UPDATE_FORCASTS, DEFAULT_FORCASTS } from "../Actions/types";
+import { UPDATE_FORCASTS, DEFAULT_FORCASTS } from "../actions/types";
 
 const forecastsReducer = (forecasts = [], action) => {
     switch (action.type) {

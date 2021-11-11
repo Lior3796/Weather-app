@@ -1,4 +1,4 @@
-import { CHANGE_THEME } from "../Actions/types";
+import { CHANGE_THEME } from "../actions/types";
 
 const themeReducer = (themeReducer = { ToggleTheme: 'light' }, action) => {
 

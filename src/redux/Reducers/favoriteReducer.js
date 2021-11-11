@@ -1,4 +1,4 @@
-import { ADD_FAVORITE, DELETE_FAVORITE } from "../Actions/types";
+import { ADD_FAVORITE, DELETE_FAVORITE } from "../actions/types";
 
 const favoriteReducer = (favoriteCities = [], action) => {
     switch (action.type) {

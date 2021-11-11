@@ -6,15 +6,12 @@ nav {
 
 	@include base {
 		@include flex-center(row, space-around);
-		width: 100%;
 	}
 	@include sm {
 		@include flex-scroll;
-		width: 100%;
 	}
 	@include md {
 		@include flex-center(row, space-around);
-		width: 100%;
 	}
 
 	ul {

@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import '../styles/style.css';
 import { getDailyForecasts } from '../service/service';
 import { useSelector, useDispatch } from 'react-redux';
-import { ADD_FAVORITE } from '../../redux/Actions/types';
+import { ADD_FAVORITE } from '../../redux/actions/types';
 import { Search } from '../features/search/Search';
 import { CardWrapper } from '../features/card/Card';
 import { Button } from '../features/button/Button';
 import { ForecastsCard } from '../features/forecastsCard/ForecastsCard';
 import { cities } from '../../data/cities';
-import { DEFAULT_FORCASTS } from '../../redux/Actions/types';
+import { DEFAULT_FORCASTS } from '../../redux/actions/types';
 
 export const Weather = () => {
     const city = useSelector(state => state.cityReducer);
@@ -21,7 +21,6 @@ export const Weather = () => {
             .catch(err => console.log(err))
     }
     useEffect(() => {
-        console.log('fired')
         getForecasts();
     }, [])
     return (
@@ -30,8 +29,7 @@ export const Weather = () => {
 
             <div className="card-container">
                 {
-
-                    forecasts?.map((city, key) => <ForecastsCard key={key} Temperature={city} />)
+                    JSON.parse(cities)?.map((city, key) => <ForecastsCard key={key} Temperature={city} />)
                 }
 
             </div>
