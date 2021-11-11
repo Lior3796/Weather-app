@@ -13,8 +13,9 @@ export const ToggleTheme = () => {
     return (
         <ToggleButtonGroup
             onChange={handleChange}
+            className={theme ? "toggle-container-dark" : "toggle-container-light"}
         >
-            <ToggleButton >change theme</ToggleButton>
+            <ToggleButton color="secondary" size='large'>Change theme</ToggleButton>
 
         </ToggleButtonGroup>
     );
