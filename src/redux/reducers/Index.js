@@ -1,9 +1,8 @@
 import { combineReducers } from "redux";
-import themeReducer from "./themeReducer";
 import favoriteReducer from "./favoriteReducer";
 import cityReducer from "./cityReducer";
 import forecastsReducer from "./forecastsReducer";
-
+import themeReducer from "../reducers/themeReducer";
 export default combineReducers({
   themeReducer,
   favoriteReducer,

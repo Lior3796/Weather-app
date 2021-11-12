@@ -1,6 +1,6 @@
 import { CHANGE_THEME } from "../actions/types";
 
-const themeReducer = (themeReducer = { ToggleTheme: 'light' }, action) => {
+const themeReducer = (theme = { ToggleTheme: 'light' }, action) => {
 
   switch (action.type) {
     case CHANGE_THEME:
@@ -8,11 +8,10 @@ const themeReducer = (themeReducer = { ToggleTheme: 'light' }, action) => {
       if (action.payload) {
         return { ToggleTheme: 'dark' };
       }
-
       return { ToggleTheme: 'light' };
 
     default:
-      return themeReducer;
+      return theme;
   }
 };
 
