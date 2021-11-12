@@ -16,6 +16,7 @@ export const AppRouter = () => {
                     <Navbar />
                     <Routes>
                         <Route exact path="/" element={<Weather />} />
+                        <Route exact path="/Weather-app" element={<Weather />} />
                         <Route exact path="/favorites" element={<Favorites />} />
                     </Routes>
                 </>

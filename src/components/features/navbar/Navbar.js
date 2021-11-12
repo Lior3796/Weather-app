@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Button } from '../button/Button';
 
 export const Navbar = () => {
+
     return (
         <nav>
             <ToggleTheme />

@@ -1,44 +1,43 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import '../../styles/style.css';
-import { CHANGE_CITY, UPDATE_FORCASTS } from '../../../redux/Actions/types';
+import { CHANGE_CITY, UPDATE_FORCASTS } from '../../../redux/actions/types';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCityList, getCityWeather, getDailyForecasts } from '../../service/service';
-import { AutoComplete } from '../autoComplete/AutoComplete';
-import { CardWrapper } from '../card/Card';
 import { Header } from '../header/Header';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export const Search = () => {
-    console.log(process.env.REACT_APP_API_KEY);
+    const inputRef = useRef('');
     const [chosenCity, setChosenCity] = useState('Tel aviv');
     const [locationKey, setLocationKey] = useState('');
-    const [cityList, setCityList] = useState([]);
     const dispatch = useDispatch();
     const favoriteCity = useSelector(state => state.cityReducer);
 
-
     const weatherHandler = () => {
-        console.log(chosenCity);
+        toast('Load your forecasts');
         getCityList(chosenCity) // locationKey
             .then(cities => cityListHandler(cities))
             .then(({ DailyForecasts }) => dispatch({ type: UPDATE_FORCASTS, payload: DailyForecasts }))
-            .catch(err => console.log(err))
+            .catch(err => toast('something went wrong '))
     }
 
     const cityListHandler = (cities) => {
-        setCityList(cities[0]);
-        console.log(cities);
         dispatch({ type: CHANGE_CITY, payload: cities[0] })
         setLocationKey(cities[0].Key)
-        return getDailyForecasts(locationKey)
     }
+    useEffect(() => {
 
+    }, [favoriteCity])
 
     return (
         <div className="search-container">
             <div>
                 <Header favoriteCity={favoriteCity} />
                 <div className="search-bar">
-                    <input type="text" onChange={(e) => { setChosenCity(e.target.value) }} />
+                    <input ref={inputRef} type="text" onChange={(e) => { setChosenCity(e.target.value) }} />
                     <input type="submit" onClick={() => weatherHandler()} value="search" />
+                    <ToastContainer />
                 </div>
             </div>
 
