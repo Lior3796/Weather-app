@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { CardWrapper } from '../features/card/Card';
 import { Button } from '../features/button/Button';
 import { getCityWeather } from '../service/service';
+import { Header } from '../features/header/Header';
 export const Favorites = () => {
     const cities = useSelector(state => state.favoriteReducer);
     const [list, setList] = useState([]);
@@ -22,6 +23,7 @@ export const Favorites = () => {
 
     return (
         <div>
+            <Header favoriteCity={{ LocalizedName: 'Favorite cities' }} />
             <div className="card-container">
                 {
                     cities?.map((city, key) => <CardWrapper city={city} key={key} />)
