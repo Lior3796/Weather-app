@@ -17,7 +17,7 @@ export const AppRouter = () => {
                     <Routes>
                         <Route exact path="/" element={<Weather />} />
                         <Route exact path="/Weather-app" element={<Weather />} />
-                        <Route exact path="/favorites" element={<Favorites />} />
+                        <Route exact path="/Weather-app/favorites" element={<Favorites />} />
                     </Routes>
                 </>
             </Router>
