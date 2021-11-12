@@ -16,7 +16,7 @@ export const Navbar = () => {
                     <Link to="/"> Weather </Link>
                 </li>
                 <li>
-                    <Link to="/Weather-app/favorites"> Favorites </Link>
+                    <Link to="/favorites"> Favorites </Link>
                 </li>
                 <Button />
             </ul>
