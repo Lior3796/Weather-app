@@ -22,7 +22,6 @@ export const Favorites = () => {
 
     return (
         <div>
-            <h1>Hi Favorites</h1>
             <div className="card-container">
                 {
                     cities?.map((city, key) => <CardWrapper city={city} key={key} />)
