@@ -8,7 +8,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const Search = () => {
-    const inputRef = useRef('');
     const [chosenCity, setChosenCity] = useState('Tel aviv');
     const [locationKey, setLocationKey] = useState('');
     const dispatch = useDispatch();
@@ -19,23 +18,25 @@ export const Search = () => {
         getCityList(chosenCity) // locationKey
             .then(cities => cityListHandler(cities))
             .then(({ DailyForecasts }) => dispatch({ type: UPDATE_FORCASTS, payload: DailyForecasts }))
-            .catch(err => toast('something went wrong '))
+            .catch(err => toast(`Cant get ${chosenCity} forecasts`))
     }
 
     const cityListHandler = (cities) => {
         dispatch({ type: CHANGE_CITY, payload: cities[0] })
         setLocationKey(cities[0].Key)
     }
-    useEffect(() => {
 
-    }, [favoriteCity])
+    useEffect(() => {
+        console.log('favorite change', favoriteCity)
+    }, [favoriteCity.isFavorite])
 
     return (
         <div className="search-container">
             <div>
                 <Header favoriteCity={favoriteCity} />
+
                 <div className="search-bar">
-                    <input ref={inputRef} type="text" onChange={(e) => { setChosenCity(e.target.value) }} />
+                    <input type="text" onChange={(e) => { setChosenCity(e.target.value) }} />
                     <input type="submit" onClick={() => weatherHandler()} value="search" />
                     <ToastContainer />
                 </div>

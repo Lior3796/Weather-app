@@ -11,7 +11,6 @@ export const Weather = () => {
     const city = useSelector(state => state.cityReducer);
     const forecasts = useSelector(state => state.forecastsReducer);
     const dispatch = useDispatch();
-    const [favorite, setFavorite] = useState();
 
     const getForecasts = () => {
         getDailyForecasts(city.Key)

@@ -11,7 +11,6 @@ export const ForecastsCard = ({ Temperature }) => {
     const date = new Date(Temperature.currentDay).toLocaleString('en-us', { weekday: 'long' });
     const { Maximum, Minimum } = Temperature.Temperature;
     const { IconPhrase } = Temperature.Day;
-    console.log(Temperature.Day);
     return (
         <div className="ForecastsCard-container">
             <Card className="ForecastsCard" >
