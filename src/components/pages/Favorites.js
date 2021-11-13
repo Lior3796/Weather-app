@@ -11,25 +11,27 @@ export const Favorites = () => {
     const [favorites, setFavorites] = useState([]);
     const mapCards = () => {
         const favoriteCities = JSON.parse(localStorage.getItem('favoriteCities'));
-        const updateCities = favoriteCities.forEach(city => {
-            getCityWeather(city.Key)
-                .then(currentWeather => currentWeather)
-                .catch(() => toast("can't show favorites cities"))
-        });
-        return updateCities;
+        console.log(favoriteCities, "list of favorite cities");
+        if (favoriteCities) {
+            favoriteCities.forEach((city) => {
+                return getCityWeather(city)
+                    .then(currentWeather => setFavorites(currentWeather))
+                    .catch(() => toast("can't show favorites cities"))
+            });
+        }
+
     }
     useEffect(() => {
-        setFavorites(mapCards());
+        mapCards();
     }, [])
 
     return (
         <div>
             <Header favoriteCity={{ LocalizedName: 'Favorite cities' }} />
-            <div className="card-container">
-                {
-                    cities?.map((city, key) => <CardWrapper city={city} key={key} />)
-                }
-            </div>
+            {
+                favorites?.map((city, key) => <CardWrapper city={city} key={key} />)
+            }
+
             <ToastContainer />
         </div>
     )

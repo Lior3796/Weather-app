@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../styles/style.css';
 import { getDailyForecasts } from '../service/service';
 import { useSelector, useDispatch } from 'react-redux';
-import { ADD_FAVORITE, DEFAULT_FORCASTS } from '../../redux/actions/types';
+import { ADD_FAVORITE, DEFAULT_FORCASTS, RESET_FAVORITE } from '../../redux/actions/types';
 import { Search } from '../features/search/Search';
 import { ForecastsCard } from '../features/forecastsCard/ForecastsCard';
 

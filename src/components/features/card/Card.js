@@ -1,14 +1,22 @@
-import React from 'react'
+import React from 'react';
 import '../../styles/style.css';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { useDispatch } from 'react-redux';
+import { CHANGE_CITY, UPDATE_FORCASTS, DEFAULT_FORCASTS } from '../../../redux/actions/types';
+import { getCityList, getCityWeather, getDailyForecasts } from '../../service/service';
 
 export const CardWrapper = ({ city }) => {
-    console.log(city);
+    const dispatch = useDispatch();
+    const changeForecasts = () => {
+        console.log(city);
+        getDailyForecasts(city.Key)
+            .then((res) => dispatch({ type: UPDATE_FORCASTS, payload: res }))
+            .catch(err => console.log(err))
+    }
     return (
         <div className="card-container">
             <Card className="ForecastsCard" id="favoriteCard">
@@ -16,13 +24,14 @@ export const CardWrapper = ({ city }) => {
                     <Typography gutterBottom variant="h5" component="div">
                         {city.WeatherText}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        {city.LocalizedName}
+                    <Typography variant="body1" color="text.secondary">
+                        <Typography gutterBottom variant="h3" component="div">
+                            {city.LocalizedName}
+                        </Typography>
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button size="small">Share</Button>
-                    <Button size="small">Learn More</Button>
+                    <Button onClick={() => changeForecasts()} size="small">Click here </Button>
                 </CardActions>
             </Card>
         </div>

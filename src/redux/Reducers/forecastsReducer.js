@@ -6,6 +6,7 @@ const forecastsReducer = (forecasts = [], action) => {
             const mapForecasts = action.payload.map(({ Temperature, Date, Day }) => { return { Temperature, currentDay: Date, Day } });
             return mapForecasts;
         case DEFAULT_FORCASTS:
+            console.log(action.payload.DailyForecasts);
             const defualtForecasts = action.payload.DailyForecasts.map(({ Temperature, Date, Day }) => { return { Temperature, currentDay: Date, Day } });
             return defualtForecasts;
         default:

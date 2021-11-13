@@ -8,13 +8,12 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const Search = () => {
-    const [chosenCity, setChosenCity] = useState('Tel aviv');
+    const [chosenCity, setChosenCity] = useState('');
     const [locationKey, setLocationKey] = useState('');
     const dispatch = useDispatch();
     const favoriteCity = useSelector(state => state.cityReducer);
 
     const weatherHandler = () => {
-        toast('Load your forecasts');
         getCityList(chosenCity) // locationKey
             .then(cities => cityListHandler(cities))
             .then(({ DailyForecasts }) => dispatch({ type: UPDATE_FORCASTS, payload: DailyForecasts }))
@@ -26,23 +25,21 @@ export const Search = () => {
         setLocationKey(cities[0].Key)
     }
 
-    useEffect(() => {
-        console.log('favorite change', favoriteCity)
-    }, [favoriteCity.isFavorite])
+    const isValidValue = (e) => {
+        let value = e.target.value;
+        value = value.replace(RegExp(/[^A-Za-z]/gi), "");
+        setChosenCity(value);
+    }
+
 
     return (
         <div className="search-container">
-            <div>
-                <Header favoriteCity={favoriteCity} />
-
-                <div className="search-bar">
-                    <input type="text" onChange={(e) => { setChosenCity(e.target.value) }} />
-                    <input type="submit" onClick={() => weatherHandler()} value="search" />
-                    <ToastContainer />
-                </div>
+            <Header favoriteCity={favoriteCity} />
+            <div className="search-bar">
+                <input value={chosenCity} onChange={(e) => isValidValue(e)} type="text" />
+                <input type="submit" onClick={() => weatherHandler()} value="search" />
+                <ToastContainer />
             </div>
-
-
         </div>
     )
 }

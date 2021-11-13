@@ -4,8 +4,8 @@ const cityReducer = (state = { LocalizedName: "Tel Aviv", Key: process.env.REACT
 
     switch (action.type) {
         case CHANGE_CITY:
-            const { LocalizedName, Key, WeatherText, } = action.payload;
-            return { LocalizedName, Key, WeatherText, isFavorite: false };
+            const { LocalizedName, Key, WeatherText } = action.payload;
+            return { LocalizedName, Key, WeatherText };
         default:
             return state;
     }

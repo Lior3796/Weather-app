@@ -7,9 +7,10 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { useDispatch, useSelector } from 'react-redux';
 import { ADD_FAVORITE, DELETE_FAVORITE } from '../../../redux/actions/types';
 export const Button = () => {
-    const dispatch = useDispatch();
     const favoriteCity = useSelector(state => state.cityReducer);
+    const dispatch = useDispatch();
     const addFavoriteCity = () => {
+        console.log('fierd from add favorite city', favoriteCity)
         dispatch({ type: ADD_FAVORITE, payload: favoriteCity })
     }
     const deleteFavoriteCity = () => {
@@ -17,7 +18,7 @@ export const Button = () => {
     }
 
     return (
-        <div id="button" className="button-container" >
+        <div className="button-container" >
             <Stack direction="row" spacing={1}>
                 <IconButton onClick={() => addFavoriteCity()} color="primary" aria-label="add to shopping cart">
                     <FavoriteIcon fontSize='large' />

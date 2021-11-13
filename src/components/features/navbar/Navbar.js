@@ -1,22 +1,20 @@
 import React from 'react'
 import '../../styles/style.css';
-import { ADD_FAVORITE } from '../../../redux/actions/types';
 import { Link } from 'react-router-dom';
 import { ToggleTheme } from '../toggleTheme/ToggleTheme';
-import { useSelector, useDispatch } from 'react-redux';
 import { Button } from '../button/Button';
 
 export const Navbar = () => {
 
     return (
-        <nav>
+        <nav className="navbar-container">
             <ToggleTheme />
-            <ul>
-                <li>
-                    <Link to="/"> Weather </Link>
+            <ul className='navbar-ul'>
+                <li className='navbar-li'>
+                    <Link to="/Lior-Solomon-31.10.2021"> Weather </Link>
                 </li>
-                <li>
-                    <Link to="/favorites"> Favorites </Link>
+                <li className='navbar-li'>
+                    <Link to="/Lior-Solomon-31.10.2021/favorites"> Favorites </Link>
                 </li>
                 <Button />
             </ul>
