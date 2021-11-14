@@ -6,9 +6,9 @@ const themeReducer = (toggle = { toggleTheme: 'light', toggleTemp: 'Imperial' },
     case CHANGE_THEME:
       console.log(action.payload);
       if (action.payload) {
-        return { ...toggle, ToggleTheme: 'dark' };
+        return { ...toggle, toggleTheme: 'dark' };
       }
-      return { ...toggle, ToggleTheme: 'light' };
+      return { ...toggle, toggleTheme: 'light' };
     case CHANGE_UNIT:
       console.log(action.payload)
       if (action.payload) {

@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 
 export const Container = () => {
     const theme = useSelector(state => state.themeReducer.toggleTheme);
+    console.log(theme)
     return (
         <div className={theme}>
             <AppRouter />
