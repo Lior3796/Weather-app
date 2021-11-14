@@ -1,4 +1,4 @@
-const modal = require("react-toastify");
+
 export const getCityList = (city) => {
     return fetch(`http://dataservice.accuweather.com//locations/v1/cities/autocomplete?apikey=${process.env.REACT_APP_API_KEY}&q=${city}&language=en-us HTTP/1.1`)
         .then(res => res.json())
