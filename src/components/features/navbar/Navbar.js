@@ -11,10 +11,10 @@ export const Navbar = () => {
             <ToggleTheme />
             <ul className="navbar-ul">
                 <li className="navbar-li">
-                    <Link className="navbar-link" to="/Lior-Solomon-31.10.2021"> Weather </Link>
+                    <Link className="navbar-link" to="/Lior-Solomon-7.11.2021"> Weather </Link>
                 </li>
                 <li className="navbar-li">
-                    <Link className="navbar-link" to="/Lior-Solomon-31.10.2021/favorites"> Favorites </Link>
+                    <Link className="navbar-link" to="/Lior-Solomon-7.11.2021/favorites"> Favorites </Link>
                 </li>
                 <Button />
             </ul>
