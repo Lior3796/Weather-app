@@ -15,7 +15,6 @@ export const CardWrapper = ({ city, currentWeather }) => {
     const dispatch = useDispatch();
     const [temp, setTemp] = useState();
     const unit = useSelector(state => state.themeReducer.toggleTemp);
-    console.log(unit)
     const changeForecasts = () => {
         getDailyForecasts(city.Key)
             .then((res) => dispatch({ type: UPDATE_FORCASTS, payload: res }))
@@ -36,29 +35,28 @@ export const CardWrapper = ({ city, currentWeather }) => {
         getWeather();
     }, [])
     return (
-        <div className="card-container">
-            <Card className="ForecastsCard">
-                <CardContent>
-                    <Typography variant="h6" color="text.secondary">
-                        <Typography gutterBottom variant="h3" component="div">
-                            {city.LocalizedName}
-                        </Typography>
+        <Card className="card">
+            <CardContent>
+                <Typography variant="h6" color="text.secondary">
+                    <Typography gutterBottom variant="h3" component="div">
+                        {city.LocalizedName}
                     </Typography>
-                    <Typography gutterBottom variant="div" component="h6">
-                        <Typography gutterBottom variant="h6" component="small">
-                            {unit}
-                        </Typography>
-                        <Typography gutterBottom variant="h6" component="small">
-                            {unit === "Imperial" ? temp?.Imperial?.Value : temp?.Metric?.Value}
-                        </Typography>
+                </Typography>
+                <Typography gutterBottom variant="div" component="h6">
+                    <Typography gutterBottom variant="h6" component="small">
+                        {unit}
                     </Typography>
-                </CardContent>
-                <CardActions>
-                    <Link to="/Lior-Solomon-31.10.2021"><Button onClick={() => changeForecasts()} size="small">Click here </Button></Link>
-                    <ToggleUnit />
-                </CardActions>
-            </Card>
-        </div>
+                    <Typography gutterBottom variant="h6" component="small">
+                        {unit === "Imperial" ? temp?.Imperial?.Value : temp?.Metric?.Value}
+                    </Typography>
+                </Typography>
+            </CardContent>
+            <CardActions>
+                <Link to="/Lior-Solomon-7.11.2021"><Button onClick={() => changeForecasts()} size="small">Click here </Button></Link>
+                <ToggleUnit />
+            </CardActions>
+        </Card>
+
     )
 }
 

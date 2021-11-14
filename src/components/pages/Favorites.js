@@ -11,7 +11,6 @@ export const Favorites = () => {
     const [favorites, setFavorites] = useState([{}]);
     const mapCards = () => {
         const favoriteCities = JSON.parse(localStorage.getItem('favoriteCities'));
-        console.log(favoriteCities, "list of favorite cities");
         if (favoriteCities) {
             favoriteCities.forEach((city) => {
                 return getCityWeather(city)
@@ -26,12 +25,14 @@ export const Favorites = () => {
     }, [])
 
     return (
-        <div>
+        <div className="favorite-container">
             <Header favoriteCity={{ LocalizedName: 'Favorite cities' }} />
-            {
-                cities?.map((city, key) => <CardWrapper currentWeather={favorites} city={city} key={key} />)
-            }
+            <div className="card-container">
 
+                {
+                    cities?.map((city, key) => <CardWrapper currentWeather={favorites} city={city} key={key} />)
+                }
+            </div>
             <ToastContainer />
         </div>
     )

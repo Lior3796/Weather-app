@@ -10,7 +10,6 @@ export const Button = () => {
     const favoriteCity = useSelector(state => state.cityReducer);
     const dispatch = useDispatch();
     const addFavoriteCity = () => {
-        console.log('fierd from add favorite city', favoriteCity)
         dispatch({ type: ADD_FAVORITE, payload: favoriteCity })
     }
     const deleteFavoriteCity = () => {

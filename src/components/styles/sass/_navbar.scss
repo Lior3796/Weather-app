@@ -1,8 +1,9 @@
-nav {
+.navbar-container {
 	@include stickyNav;
-	@include flex-center(row, space-around);
+	@include flex-center(row, space-evenly);
 	width: 100%;
 	z-index: 10;
+	display: flex;
 
 	@include base {
 		@include flex-center(row, space-around);
@@ -10,7 +11,7 @@ nav {
 	@include sm {
 		@include flex-scroll;
 	}
-	@include md {
+	@include xl {
 		@include flex-center(row, space-around);
 	}
 
