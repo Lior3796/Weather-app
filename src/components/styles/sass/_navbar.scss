@@ -14,9 +14,9 @@ nav {
 		@include flex-center(row, space-around);
 	}
 
-	ul {
+	.navbar-ul {
 		@include flex-center(row, space-around);
-		li {
+		.navbar-li {
 			text-decoration: none;
 			margin: 0.5rem;
 		}

@@ -9,7 +9,7 @@
 		@include flex-center(row, center, space-around);
 		margin: 1.7rem;
 		width: 100%;
-		input[type="text"] {
+		.search-input {
 			background-size: #fff;
 			width: 50%;
 			min-width: 150px;
@@ -19,7 +19,7 @@
 			padding: 0px 25px;
 			border-radius: 25px 0 0 25px;
 		}
-		input[type="submit"] {
+		.search-button {
 			position: relative;
 			width: 10%;
 			min-width: 50px;

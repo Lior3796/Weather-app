@@ -1,6 +1,8 @@
-// theme
+// Toggle
 export const CHANGE_THEME = "CHANGE_THEME";
+export const CHANGE_UNIT = "CHANGE_UNIT";
 
+// city
 export const CHANGE_CITY = "CHANGE_CITY";
 export const UPDATE_CITY = "UPDATE_CITY";
 export const CHANGE_TEMP = "CHANGE_TEMP";

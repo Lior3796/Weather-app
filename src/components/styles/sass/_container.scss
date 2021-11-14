@@ -9,7 +9,7 @@
 }
 
 .container {
-	* > a {
+	.navbar-link {
 		text-decoration: none;
 	}
 	position: relative;
@@ -21,21 +21,18 @@
 		padding: 0.3rem;
 		position: relative;
 		height: 200vh;
-		width: 100%;
 	}
 	@include sm {
 		font-size: 1.5rem;
 		padding: 0.3rem;
 		position: relative;
 		height: 200vh;
-		width: 100%;
 	}
 	@include md {
 		font-size: 2rem;
 		padding: 0.3rem;
 		position: relative;
 		height: 200vh;
-		width: 100%;
 	}
 
 	@include lg {
@@ -43,7 +40,6 @@
 		padding: 0.3rem;
 		position: relative;
 		height: 200vh;
-		width: 100%;
 	}
 
 	@include xl {
@@ -51,7 +47,6 @@
 		padding: 0.3rem;
 		position: relative;
 		height: 100vh;
-		width: 100%;
 	}
 	ul {
 		list-style: none;

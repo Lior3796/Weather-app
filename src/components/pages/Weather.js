@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import '../styles/style.css';
 import { getDailyForecasts } from '../service/service';
 import { useSelector, useDispatch } from 'react-redux';
-import { ADD_FAVORITE, DEFAULT_FORCASTS, RESET_FAVORITE } from '../../redux/actions/types';
+import { DEFAULT_FORCASTS } from '../../redux/actions/types';
 import { Search } from '../features/search/Search';
 import { ForecastsCard } from '../features/forecastsCard/ForecastsCard';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export const Weather = () => {
@@ -15,7 +17,7 @@ export const Weather = () => {
     const getForecasts = () => {
         getDailyForecasts(city.Key)
             .then(res => dispatch({ type: DEFAULT_FORCASTS, payload: res }))
-            .catch(err => console.log(err))
+            .catch(() => toast(`cannot get forecasts`))
     }
     useEffect(() => {
         getForecasts();
@@ -27,7 +29,7 @@ export const Weather = () => {
                 {
                     forecasts?.map((city, key) => <ForecastsCard key={key} Temperature={city} />)
                 }
-
+                <ToastContainer />
             </div>
         </div>
     )

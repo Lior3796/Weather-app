@@ -1,17 +1,24 @@
-import { CHANGE_THEME } from "../actions/types";
+import { CHANGE_THEME, CHANGE_UNIT } from "../actions/types";
 
-const themeReducer = (theme = { ToggleTheme: 'light' }, action) => {
+const themeReducer = (toggle = { toggleTheme: 'light', toggleTemp: 'Imperial' }, action) => {
 
   switch (action.type) {
     case CHANGE_THEME:
       console.log(action.payload);
       if (action.payload) {
-        return { ToggleTheme: 'dark' };
+        return { ...toggle, ToggleTheme: 'dark' };
       }
-      return { ToggleTheme: 'light' };
+      return { ...toggle, ToggleTheme: 'light' };
+    case CHANGE_UNIT:
+      console.log(action.payload)
+      if (action.payload) {
+        console.log(action.payload)
+        return { ...toggle, toggleTemp: "Imperial" };
+      }
+      return { ...toggle, toggleTemp: "Metric" };
 
     default:
-      return theme;
+      return toggle;
   }
 };
 

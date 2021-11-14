@@ -27,7 +27,7 @@ export const Search = () => {
 
     const isValidValue = (e) => {
         let value = e.target.value;
-        value = value.replace(RegExp(/[^A-Za-z]/gi), "");
+        value = value.replace(RegExp(/[^A-Z a-z]/gi), "");
         setChosenCity(value);
     }
 
@@ -36,8 +36,8 @@ export const Search = () => {
         <div className="search-container">
             <Header favoriteCity={favoriteCity} />
             <div className="search-bar">
-                <input value={chosenCity} onChange={(e) => isValidValue(e)} type="text" />
-                <input type="submit" onClick={() => weatherHandler()} value="search" />
+                <input className="search-input" value={chosenCity} onChange={(e) => isValidValue(e)} type="text" />
+                <input className="search-button" type="submit" onClick={() => weatherHandler()} value="search" />
                 <ToastContainer />
             </div>
         </div>

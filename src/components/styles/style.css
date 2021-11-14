@@ -15,7 +15,7 @@
   width: 100%;
 }
 
-.container * > a, .light * > a, .dark * > a {
+.container .navbar-link, .light .navbar-link, .dark .navbar-link {
   text-decoration: none;
 }
 
@@ -25,7 +25,6 @@
     padding: 0.3rem;
     position: relative;
     height: 200vh;
-    width: 100%;
   }
 }
 
@@ -35,7 +34,6 @@
     padding: 0.3rem;
     position: relative;
     height: 200vh;
-    width: 100%;
   }
 }
 
@@ -45,7 +43,6 @@
     padding: 0.3rem;
     position: relative;
     height: 200vh;
-    width: 100%;
   }
 }
 
@@ -55,7 +52,6 @@
     padding: 0.3rem;
     position: relative;
     height: 200vh;
-    width: 100%;
   }
 }
 
@@ -65,7 +61,6 @@
     padding: 0.3rem;
     position: relative;
     height: 100vh;
-    width: 100%;
   }
 }
 
@@ -176,7 +171,6 @@ nav {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 100%;
   }
 }
 
@@ -193,7 +187,6 @@ nav {
             align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    width: 100%;
   }
 }
 
@@ -211,11 +204,10 @@ nav {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 100%;
   }
 }
 
-nav ul {
+nav .navbar-ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -230,7 +222,7 @@ nav ul {
           flex-direction: row;
 }
 
-nav ul li {
+nav .navbar-ul .navbar-li {
   text-decoration: none;
   margin: 0.5rem;
 }
@@ -358,7 +350,7 @@ nav .toggle-container-light button {
   width: 100%;
 }
 
-.search-container .search-bar input[type="text"] {
+.search-container .search-bar .search-input {
   background-size: #fff;
   width: 50%;
   min-width: 150px;
@@ -369,7 +361,7 @@ nav .toggle-container-light button {
   border-radius: 25px 0 0 25px;
 }
 
-.search-container .search-bar input[type="submit"] {
+.search-container .search-bar .search-button {
   position: relative;
   width: 10%;
   min-width: 50px;
@@ -580,10 +572,10 @@ nav .toggle-container-light button {
 
 .ForecastsCard {
   width: 100%;
-  height: 150px;
+  min-height: 170px;
 }
 
-#favoriteCard {
+.favoriteCard {
   width: 50%;
 }
 /*# sourceMappingURL=style.css.map */

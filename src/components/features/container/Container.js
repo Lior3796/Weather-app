@@ -5,7 +5,7 @@ import { Navbar } from '../navbar/Navbar';
 import { useSelector } from 'react-redux';
 
 export const Container = () => {
-    const theme = useSelector(state => state.themeReducer.ToggleTheme);
+    const theme = useSelector(state => state.themeReducer.toggleTheme);
     return (
         <div className={theme}>
             <AppRouter />
