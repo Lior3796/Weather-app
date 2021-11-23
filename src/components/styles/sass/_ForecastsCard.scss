@@ -1,6 +1,5 @@
 .ForecastsCard-container {
 	max-width: 350px;
-
 	@include base {
 		width: 80%;
 	}
@@ -16,13 +15,10 @@
 	}
 
 	@include xl {
-		width: 30%;
+		width: 100%;
 	}
 }
 .ForecastsCard {
-	width: 100%;
+	width: 80%;
 	min-height: 170px;
-}
-.favoriteCard {
-	width: 50%;
 }

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import '../../styles/style.css';
+
 export const Header = ({ favoriteCity }) => {
+
     const [favorite, setFavorite] = useState('');
     const getFavoriteCities = () => {
         let favoriteCities = JSON.parse(localStorage.getItem("favoriteCities"));
@@ -8,8 +10,6 @@ export const Header = ({ favoriteCity }) => {
             favoriteCities = favoriteCities.filter((city) => city.Key === favoriteCity.Key);
             if (favoriteCities.length !== 0) {
                 setFavorite('Favorite city');
-            } else {
-                setFavorite('');
             }
         }
     }
@@ -17,8 +17,7 @@ export const Header = ({ favoriteCity }) => {
 
     return (
         <div className="text-container">
-            <h1 className="header">{favoriteCity.LocalizedName}</h1>
-            {favorite && <h4 className="header">{favorite}</h4>}
+            <h1 className="header">{favoriteCity.LocalizedName || "Favorite cities"}</h1>
         </div>
     )
 }

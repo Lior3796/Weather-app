@@ -2,9 +2,9 @@ import { combineReducers } from "redux";
 import favoriteReducer from "./favoriteReducer";
 import cityReducer from "./cityReducer";
 import forecastsReducer from "./forecastsReducer";
-import themeReducer from "./themeReducer";
+import toggleReducer from "./toggleReducer";
 export default combineReducers({
-  themeReducer,
+  toggleReducer,
   favoriteReducer,
   cityReducer,
   forecastsReducer

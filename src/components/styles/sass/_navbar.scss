@@ -1,15 +1,16 @@
 .navbar-container {
 	@include stickyNav;
-	@include flex-center(row, space-evenly);
+	@include flex-center(row, space-around);
+
 	width: 100%;
 	z-index: 10;
 	display: flex;
 
 	@include base {
-		@include flex-center(row, space-around);
+		@include flex-center(row, space-evenly);
 	}
 	@include sm {
-		@include flex-scroll;
+		@include flex-center(row, space-evenly);
 	}
 	@include xl {
 		@include flex-center(row, space-around);

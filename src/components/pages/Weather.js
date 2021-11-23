@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import '../styles/style.css';
 import { getDailyForecasts } from '../service/service';
 import { useSelector, useDispatch } from 'react-redux';
@@ -8,26 +8,28 @@ import { ForecastsCard } from '../features/forecastsCard/ForecastsCard';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
 export const Weather = () => {
-    const city = useSelector(state => state.cityReducer);
-    const forecasts = useSelector(state => state.forecastsReducer);
+    const { Key } = useSelector(state => state.cityReducer);
+    const { forecastsReducer } = useSelector(state => state);
     const dispatch = useDispatch();
 
-    const getForecasts = () => {
-        getDailyForecasts(city.Key)
-            .then(res => dispatch({ type: DEFAULT_FORCASTS, payload: res }))
-            .catch(() => toast(`cannot get forecasts`))
+    const getForecasts = async () => {
+        try {
+            const forecasts = await getDailyForecasts(Key);
+            dispatch({ type: DEFAULT_FORCASTS, payload: forecasts })
+        } catch (e) {
+            console.log("cant update forecasts");
+        }
     }
     useEffect(() => {
         getForecasts();
-    }, [city.Key])
+    }, [Key])
     return (
         <div className="weather-container">
             <Search />
             <div className="card-container">
                 {
-                    forecasts?.map((city, key) => <ForecastsCard key={key} Temperature={city} />)
+                    forecastsReducer?.map((city, key) => <ForecastsCard key={key} forecast={city} />)
                 }
                 <ToastContainer />
             </div>

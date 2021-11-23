@@ -3,27 +3,39 @@ import '../../styles/style.css';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import { motion } from "framer-motion";
 
-export const ForecastsCard = ({ Temperature }) => {
-    const date = new Date(Temperature.currentDay).toLocaleString('en-us', { weekday: 'long' });
-    const { Maximum, Minimum } = Temperature.Temperature;
-    const { IconPhrase } = Temperature.Day;
+export const ForecastsCard = ({ forecast }) => {
+    let { currentDay } = forecast;
+    const { Maximum, Minimum } = forecast.Temperature;
+    const { IconPhrase } = forecast.Day;
+    currentDay = new Date(forecast.currentDay).toLocaleString('en-us', { weekday: 'long' });
+
     return (
+
         <div className="ForecastsCard-container">
-            <Card className="ForecastsCard" >
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                        {date}
+            <Card component={motion.div}
+                whileHover={{
+                    scale: 1.2,
+                    transition: { duration: 0.3 }
+                }}
+                whileTap={{ scale: 0.9 }}
+                className="ForecastsCard" >
+                <CardContent style={{ width: "60%" }}
+                >
+                    <Typography style={{ fontFamily: "Assistant" }} gutterBottom variant="h5" component="div">
+                        {currentDay}
                     </Typography>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography style={{ fontFamily: "Assistant" }} gutterBottom variant="h5" component="div">
                         {IconPhrase}
                     </Typography>
-                    <Typography variant="h6" color="text.secondary">
+                    <Typography style={{ fontFamily: "Assistant" }} variant="h6" color="text.secondary">
                         {Maximum.Value}
                     </Typography>
                 </CardContent>
 
             </Card>
         </div>
+
     )
 }

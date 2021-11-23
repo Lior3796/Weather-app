@@ -2,21 +2,29 @@ import React from 'react'
 import '../../styles/style.css';
 import { Link } from 'react-router-dom';
 import { ToggleTheme } from '../toggleTheme/ToggleTheme';
-import { Button } from '../button/Button';
 import { ToggleUnit } from '../toggleUnit/ToggleUnit';
-export const Navbar = () => {
+import { Header } from '../header/Header';
+import { useSelector } from 'react-redux';
+import { Buttons } from '../buttons/Buttons';
+import SwipeableTemporaryDrawer from '../sidebar/Sidebar';
 
+export const Navbar = () => {
+    const favoriteCity = useSelector(state => state.cityReducer);
     return (
         <nav className="navbar-container">
-            <ToggleTheme />
+            <div>
+                <ToggleTheme />
+                <ToggleUnit />
+            </div>
+            <Header favoriteCity={favoriteCity} />
             <ul className="navbar-ul">
                 <li className="navbar-li">
-                    <Link className="navbar-link" to="/Lior-Solomon-7.11.2021"> Weather </Link>
+                    <Link className="navbar-link" to="/weather-app"> Weather </Link>
                 </li>
                 <li className="navbar-li">
-                    <Link className="navbar-link" to="/Lior-Solomon-7.11.2021/favorites"> Favorites </Link>
+                    <Link className="navbar-link" to="/weather-app/favorites"> Favorites </Link>
                 </li>
-                <Button />
+                <Buttons />
             </ul>
         </nav>
     )

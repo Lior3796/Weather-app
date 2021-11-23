@@ -1,17 +1,23 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { Button } from '@mui/material';
+import { useDispatch, useSelector } from 'react-redux';
+import ToggleButton from '@mui/material/ToggleButton';
+import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import { CHANGE_UNIT } from '../../../redux/actions/types';
 export const ToggleUnit = () => {
     const dispatch = useDispatch();
     const [temp, setTemp] = useState(true);
-
+    const { toggleTheme } = useSelector(state => state.toggleReducer)
     const changeUnit = () => {
         setTemp(!temp);
         dispatch({ type: CHANGE_UNIT, payload: temp })
     };
     return (
-        <Button onClick={() => changeUnit()} size="small">change Unit </Button>
+        <ToggleButtonGroup
+            onClick={() => changeUnit()}
+            className={`toggle-container-${toggleTheme}`}
+        >
+            <ToggleButton style={{ fontFamily: "Assistant" }} color="secondary" size='large'>Change Unit</ToggleButton>
+        </ToggleButtonGroup>
     );
 
 

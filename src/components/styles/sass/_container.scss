@@ -1,11 +1,12 @@
+body {
+	font-family: "Assistant", sans-serif;
+}
 :root {
 	margin: 0;
 	padding: 0;
 	font-size: $root-font-size;
 	text-decoration: none;
 	box-sizing: border-box;
-	font-family: "Assistant";
-	src: url("https://fonts.googleapis.com/css2?family=Assistant:wght@200&display=swap");
 }
 
 .container {
