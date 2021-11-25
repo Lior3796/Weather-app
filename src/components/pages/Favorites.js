@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export const Favorites = () => {
     const cities = useSelector(state => state.favoriteReducer);
+    console.log(cities)
     const [favorites, setFavorites] = useState([{}]);
 
     const getFavorites = () => {
@@ -19,7 +20,7 @@ export const Favorites = () => {
             toast(`cant get favorite cities`)
         }
         try {
-            if (!favoriteCities) return; // check if has favorites
+            if (!favoriteCities) return;
             mapFavoritesCities(favoriteCities);
 
         } catch (e) {
@@ -45,7 +46,7 @@ export const Favorites = () => {
                 }
             </div>
             {/* <Location
-                googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_MAPS_API_KEY}.exp&libraries=geometry,drawing,places`}
+                googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_API_KEY}.exp&libraries=geometry,drawing,places`}
                 loadingElement={<div style={{ height: `100%` }} />}
                 containerElement={<div style={{ height: `400px` }} />}
                 mapElement={<div style={{ height: `100%` }} />}

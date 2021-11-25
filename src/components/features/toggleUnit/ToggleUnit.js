@@ -16,7 +16,7 @@ export const ToggleUnit = () => {
             onClick={() => changeUnit()}
             className={`toggle-container-${toggleTheme}`}
         >
-            <ToggleButton style={{ fontFamily: "Assistant" }} color="secondary" size='large'>Change Unit</ToggleButton>
+            <ToggleButton style={{ fontFamily: "Assistant", fontSize: "1.2rem", marginRight: "5px" }} color="secondary" size="medium">Change Unit</ToggleButton>
         </ToggleButtonGroup>
     );
 

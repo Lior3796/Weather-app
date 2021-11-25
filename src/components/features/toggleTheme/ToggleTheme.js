@@ -19,9 +19,9 @@ export const ToggleTheme = () => {
             onChange={handleChange}
             className={theme ? "toggle-container-light" : "toggle-container-dark"}
         >
-            <ToggleButton style={{ fontFamily: "Assistant" }} color="secondary" size='large'>Change theme</ToggleButton>
+            <ToggleButton style={{ fontFamily: "Assistant", fontSize: "1.2rem", marginRight: "5px" }} color="secondary" size='medium'>Change theme</ToggleButton>
 
-        </ToggleButtonGroup>
+        </ToggleButtonGroup >
     );
 
 

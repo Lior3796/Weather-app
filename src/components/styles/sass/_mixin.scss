@@ -27,6 +27,12 @@
 	animation: backgroundAnimation 5s 1s infinite alternate;
 }
 
+.weather-icon {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
 @mixin light {
 	background: $gradient-light;
 	color: rgb(0, 0, 0);

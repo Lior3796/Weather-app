@@ -15,7 +15,7 @@ export const DEFAULT_FORCASTS = "DEFAULT_FORCASTS";
 // favorite 
 export const ADD_FAVORITE = "ADD_FAVORITE";
 export const DELETE_FAVORITE = "DELETE_FAVORITE";
-export const RESET_FAVORITE = "RESET_FAVORITE";
+
 
 
 

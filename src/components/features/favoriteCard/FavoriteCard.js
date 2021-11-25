@@ -16,7 +16,7 @@ export const FavoriteCard = ({ city }) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [temp, setTemp] = useState();
-    const unit = useSelector(state => state.themeReducer.toggleTemp);
+    const unit = useSelector(state => state.toggleReducer.toggleTemp);
 
 
     const changeForecasts = async () => {

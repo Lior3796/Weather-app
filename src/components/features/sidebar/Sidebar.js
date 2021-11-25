@@ -8,6 +8,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { ToggleUnit } from '../toggleUnit/ToggleUnit';
 import { Link } from '../link/Link';
 import { Typography } from '@mui/material';
+import { ToggleTheme } from '../toggleTheme/ToggleTheme';
+import { AddButton } from '../addButton/AddButton';
+import { RemoveButton } from '../removeButton/RemoveButton';
+
 
 export default function Sidebar() {
     const [state, setState] = useState({
@@ -31,12 +35,16 @@ export default function Sidebar() {
             onKeyDown={toggleDrawer(anchor, false)}
         >
 
-            <List>
+            <List >
                 {sidebarsLinks.map((link, key) => <Link key={key} pathname={link.pathname} text={link.text} />)}
-
+                <ToggleTheme />
+                <ToggleUnit />
+                <AddButton />
+                <RemoveButton />
             </List>
 
             <Divider />
+
         </Box>
     );
 

@@ -7,6 +7,7 @@ body {
 	font-size: $root-font-size;
 	text-decoration: none;
 	box-sizing: border-box;
+	overflow-x: hidden;
 }
 
 .container {
@@ -16,37 +17,30 @@ body {
 	position: relative;
 	height: 100vh;
 	width: 100%;
+	padding: 0.3rem;
+	font-size: 1.5rem;
 
 	@include base {
-		font-size: 1.5rem;
-		padding: 0.3rem;
-		position: relative;
-		height: 200vh;
+		height: 260vh;
 	}
 	@include sm {
-		font-size: 1.5rem;
-		padding: 0.3rem;
-		position: relative;
-		height: 200vh;
+		height: 260vh;
 	}
 	@include md {
 		font-size: 2rem;
-		padding: 0.3rem;
-		position: relative;
+
 		height: 200vh;
 	}
 
 	@include lg {
 		font-size: 2rem;
-		padding: 0.3rem;
-		position: relative;
+
 		height: 200vh;
 	}
 
 	@include xl {
 		font-size: 2rem;
-		padding: 0.3rem;
-		position: relative;
+
 		height: 100vh;
 	}
 	ul {
@@ -60,4 +54,9 @@ body {
 .dark {
 	@extend .container;
 	@include dark;
+}
+.layout-container {
+	display: flex;
+	width: 70%;
+	justify-content: space-between;
 }

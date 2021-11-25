@@ -12,11 +12,11 @@ export const AddButton = () => {
         dispatch({ type: ADD_FAVORITE, payload: favoriteCity })
     }
     return (
-
-        <IconButton onClick={() => addFavoriteCity()} color="primary" aria-label="add to shopping cart">
-            <FavoriteIcon fontSize='large' />
-        </IconButton>
-
+        <div>
+            <IconButton onClick={() => addFavoriteCity()} color="primary" aria-label="add to shopping cart">
+                <FavoriteIcon fontSize="large" />
+            </IconButton>
+        </div>
 
     );
 }

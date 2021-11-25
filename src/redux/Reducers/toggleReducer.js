@@ -1,6 +1,6 @@
 import { CHANGE_THEME, CHANGE_UNIT } from "../actions/types";
 
-const toggleReducer = (toggle = { toggleTheme: 'light', toggleTemp: 'Imperial' }, action) => {
+const toggleReducer = (toggle = { toggleTheme: 'light', toggleTemp: 'Metric' }, action) => {
 
   switch (action.type) {
     case CHANGE_THEME:

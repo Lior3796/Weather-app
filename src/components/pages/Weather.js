@@ -5,6 +5,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { DEFAULT_FORCASTS } from '../../redux/actions/types';
 import { Search } from '../features/search/Search';
 import { ForecastsCard } from '../features/forecastsCard/ForecastsCard';
+import { motion } from "framer-motion";
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -21,6 +23,12 @@ export const Weather = () => {
             console.log("cant update forecasts");
         }
     }
+    const ForecastsCardContainer = {
+        transition: { duration: 5, delay: 1.5 },
+        visible: { x: "0px" },
+        hidden: { x: "100vw" },
+    }
+
     useEffect(() => {
         getForecasts();
     }, [Key])
@@ -29,7 +37,12 @@ export const Weather = () => {
             <Search />
             <div className="card-container">
                 {
-                    forecastsReducer?.map((city, key) => <ForecastsCard key={key} forecast={city} />)
+                    forecastsReducer?.map((city, key) =>
+                        <ForecastsCard
+                            component={motion.div}
+                            initial="hidden"
+                            animate="visible"
+                            variants={ForecastsCardContainer} key={key} forecast={city} />)
                 }
                 <ToastContainer />
             </div>

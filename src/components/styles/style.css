@@ -1,3 +1,9 @@
+.weather-icon, .weather-icon-PM, .weather-icon-AM {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 body {
   font-family: "Assistant", sans-serif;
 }
@@ -9,12 +15,15 @@ body {
   text-decoration: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .container, .light, .dark {
   position: relative;
   height: 100vh;
   width: 100%;
+  padding: 0.3rem;
+  font-size: 1.5rem;
 }
 
 .container .navbar-link, .light .navbar-link, .dark .navbar-link {
@@ -23,27 +32,19 @@ body {
 
 @media (min-width: 0px) {
   .container, .light, .dark {
-    font-size: 1.5rem;
-    padding: 0.3rem;
-    position: relative;
-    height: 200vh;
+    height: 260vh;
   }
 }
 
 @media (min-width: 460px) {
   .container, .light, .dark {
-    font-size: 1.5rem;
-    padding: 0.3rem;
-    position: relative;
-    height: 200vh;
+    height: 260vh;
   }
 }
 
 @media (min-width: 720px) {
   .container, .light, .dark {
     font-size: 2rem;
-    padding: 0.3rem;
-    position: relative;
     height: 200vh;
   }
 }
@@ -51,8 +52,6 @@ body {
 @media (min-width: 960px) {
   .container, .light, .dark {
     font-size: 2rem;
-    padding: 0.3rem;
-    position: relative;
     height: 200vh;
   }
 }
@@ -60,8 +59,6 @@ body {
 @media (min-width: 1200px) {
   .container, .light, .dark {
     font-size: 2rem;
-    padding: 0.3rem;
-    position: relative;
     height: 100vh;
   }
 }
@@ -128,6 +125,16 @@ body {
 .dark button {
   color: white;
   cursor: pointer;
+}
+
+.layout-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @-webkit-keyframes backgroundAnimation {
@@ -249,6 +256,8 @@ body {
 
 .navbar-container .toggle-container-dark {
   background: linear-gradient(33deg, #121317, #323b42);
+  max-height: 50px;
+  font-size: 3rem;
 }
 
 .navbar-container .toggle-container-dark .header {
@@ -278,6 +287,8 @@ body {
 .navbar-container .toggle-container-light {
   background: linear-gradient(33deg, #abc7ff, #c1e3ff);
   color: black;
+  font-size: 3rem;
+  max-height: 50px;
 }
 
 .navbar-container .toggle-container-light * > a {
@@ -642,5 +653,53 @@ body {
 .ForecastsCard {
   width: 80%;
   min-height: 170px;
+  max-width: 350px;
+  border-radius: 10px;
+  position: relative;
+  -webkit-box-shadow: 10px 10px 10px 10px black;
+          box-shadow: 10px 10px 10px 10px black;
+}
+
+.weather-icon-PM {
+  color: black;
+}
+
+.weather-icon-AM {
+  color: yellow;
+}
+
+.card-content {
+  width: 60%;
+  font-family: "Assistant";
+}
+
+.night_bg {
+  background: #0f2129;
+}
+
+.frosty_bg {
+  background: #29386f;
+}
+
+.sunny_bg {
+  background: #ffbd3f;
+}
+
+.custom-shape-divider-bottom-1637765530 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1637765530 svg {
+  position: relative;
+  display: block;
+  width: calc(160% + 1.3px);
+  height: 100px;
 }
 /*# sourceMappingURL=style.css.map */
