@@ -721,7 +721,6 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -789,7 +788,6 @@
   width: 100%;
   z-index: 10;
   height: 30%;
-  background: rgba(37, 37, 37, 0.589);
 }
 
 .social-links > div {
