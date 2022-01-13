@@ -11,7 +11,9 @@
 		margin: 1.7rem;
 		width: 100%;
 		padding-top: 15px;
-
+		input[type="text"] {
+			font-size: 2rem;
+		}
 		.search-input {
 			background-size: black;
 			width: 50%;

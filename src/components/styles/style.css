@@ -526,6 +526,10 @@
   padding-top: 15px;
 }
 
+.search-container .search-bar input[type="text"] {
+  font-size: 2rem;
+}
+
 .search-container .search-bar .search-input {
   background-size: black;
   width: 50%;
