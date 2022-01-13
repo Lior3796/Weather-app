@@ -1,0 +1,55 @@
+// Add responsive
+.forecasts-map-container {
+	@include flex-center(row, space-around);
+	width: 100%;
+	flex: 1.4;
+
+	@include base {
+		@include flex-scroll;
+		height: 100%;
+	}
+	@include sm {
+		@include flex-center(row, space-around);
+	}
+	@include md {
+		@include flex-center(column, space-around);
+	}
+	@include lg {
+		@include flex-center(row, space-between);
+		flex-wrap: wrap;
+	}
+
+	@include xl {
+		@include flex-center(row, space-around);
+		flex-wrap: wrap;
+		width: 100%;
+	}
+
+	.favoriteCard {
+		* > div {
+			height: 7rem;
+		}
+		width: 30%;
+		border: $border;
+		max-height: 300px;
+		max-width: 250px;
+		@include flex-center(column);
+		@include base {
+			width: 70%;
+		}
+
+		@include sm {
+			width: 70%;
+		}
+
+		@include md {
+			width: 30%;
+		}
+		@include lg {
+			width: 25%;
+		}
+		@include xl {
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,46 @@
+.weather-container {
+	@include flex-center(column, space-around);
+	width: 100%;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	@include base {
+		@include flex-center(column, space-evenly);
+	}
+	@include sm {
+		@include flex-center(column, space-evenly);
+	}
+	@include md {
+		@include flex-center(column, space-evenly);
+
+		font-size: 2rem;
+	}
+
+	@include lg {
+		font-size: 2rem;
+	}
+
+	@include xl {
+		font-size: 2rem;
+	}
+}
+.forecasts-map-container {
+	@include base {
+		@include flex-center(column, space-evenly);
+	}
+	@include sm {
+		@include flex-center(column, space-evenly);
+	}
+	@include md {
+		@include flex-center(column, space-evenly);
+
+		font-size: 2rem;
+	}
+
+	@include lg {
+		font-size: 2rem;
+	}
+
+	@include xl {
+	}
+}

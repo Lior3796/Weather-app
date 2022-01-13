@@ -1,0 +1,7 @@
+.favorite-container {
+	position: relative;
+	height: calc(100vh - 60px);
+}
+.forecasts-map-container {
+	@include flex-center(column, space-around);
+}
