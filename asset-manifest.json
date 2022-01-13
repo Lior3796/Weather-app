@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/Lior3796/Weather-app/static/css/main.85aa3431.chunk.css",
-    "main.js": "/Lior3796/Weather-app/static/js/main.bccfdd73.chunk.js",
-    "main.js.map": "/Lior3796/Weather-app/static/js/main.bccfdd73.chunk.js.map",
-    "runtime-main.js": "/Lior3796/Weather-app/static/js/runtime-main.8644a727.js",
-    "runtime-main.js.map": "/Lior3796/Weather-app/static/js/runtime-main.8644a727.js.map",
-    "static/css/2.58a45539.chunk.css": "/Lior3796/Weather-app/static/css/2.58a45539.chunk.css",
-    "static/js/2.376601d5.chunk.js": "/Lior3796/Weather-app/static/js/2.376601d5.chunk.js",
-    "static/js/2.376601d5.chunk.js.map": "/Lior3796/Weather-app/static/js/2.376601d5.chunk.js.map",
-    "static/js/3.43d78ad0.chunk.js": "/Lior3796/Weather-app/static/js/3.43d78ad0.chunk.js",
-    "static/js/3.43d78ad0.chunk.js.map": "/Lior3796/Weather-app/static/js/3.43d78ad0.chunk.js.map",
-    "index.html": "/Lior3796/Weather-app/index.html",
-    "static/css/2.58a45539.chunk.css.map": "/Lior3796/Weather-app/static/css/2.58a45539.chunk.css.map",
-    "static/css/main.85aa3431.chunk.css.map": "/Lior3796/Weather-app/static/css/main.85aa3431.chunk.css.map",
-    "static/js/2.376601d5.chunk.js.LICENSE.txt": "/Lior3796/Weather-app/static/js/2.376601d5.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/Lior3796/Weather-app/static/media/logo.6ce24c58.svg"
+    "main.css": "/Lior3796/weather-app/static/css/main.85aa3431.chunk.css",
+    "main.js": "/Lior3796/weather-app/static/js/main.bc38501b.chunk.js",
+    "main.js.map": "/Lior3796/weather-app/static/js/main.bc38501b.chunk.js.map",
+    "runtime-main.js": "/Lior3796/weather-app/static/js/runtime-main.eab899a2.js",
+    "runtime-main.js.map": "/Lior3796/weather-app/static/js/runtime-main.eab899a2.js.map",
+    "static/css/2.58a45539.chunk.css": "/Lior3796/weather-app/static/css/2.58a45539.chunk.css",
+    "static/js/2.11b436e0.chunk.js": "/Lior3796/weather-app/static/js/2.11b436e0.chunk.js",
+    "static/js/2.11b436e0.chunk.js.map": "/Lior3796/weather-app/static/js/2.11b436e0.chunk.js.map",
+    "static/js/3.7fee5cfa.chunk.js": "/Lior3796/weather-app/static/js/3.7fee5cfa.chunk.js",
+    "static/js/3.7fee5cfa.chunk.js.map": "/Lior3796/weather-app/static/js/3.7fee5cfa.chunk.js.map",
+    "index.html": "/Lior3796/weather-app/index.html",
+    "static/css/2.58a45539.chunk.css.map": "/Lior3796/weather-app/static/css/2.58a45539.chunk.css.map",
+    "static/css/main.85aa3431.chunk.css.map": "/Lior3796/weather-app/static/css/main.85aa3431.chunk.css.map",
+    "static/js/2.11b436e0.chunk.js.LICENSE.txt": "/Lior3796/weather-app/static/js/2.11b436e0.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/Lior3796/weather-app/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8644a727.js",
+    "static/js/runtime-main.eab899a2.js",
     "static/css/2.58a45539.chunk.css",
-    "static/js/2.376601d5.chunk.js",
+    "static/js/2.11b436e0.chunk.js",
     "static/css/main.85aa3431.chunk.css",
-    "static/js/main.bccfdd73.chunk.js"
+    "static/js/main.bc38501b.chunk.js"
   ]
 }
