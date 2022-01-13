@@ -3,7 +3,8 @@ import { useSelector } from "react-redux";
 import { Navbar } from '../navbar/Navbar';
 import {
     BrowserRouter as Router,
-    Routes, Route
+    Routes, Route,
+
 } from "react-router-dom";
 import { Weather } from '../../pages/Weather';
 import { Favorites } from '../../pages/Favorites';
