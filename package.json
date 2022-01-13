@@ -1,6 +1,6 @@
 {
-	"homepage": "https://github.io/Lior3796/Weather-app",
-	"name": "Weather-app",
+	"homepage": "https://github.io/Lior3796/weather-app",
+	"name": "weather-app",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
