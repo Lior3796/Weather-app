@@ -1,5 +1,5 @@
 .Footer-container {
-	@media #{$sm},#{$md} {
+	@media #{$sm},#{$lg} {
 		font-size: 3rem;
 	}
 	position: absolute;
@@ -7,8 +7,7 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	scroll-snap-align: start;
+	align-items: flex-end;
 }
 .Footer-links {
 	display: grid;
