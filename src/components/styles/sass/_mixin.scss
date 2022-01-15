@@ -111,8 +111,8 @@
 	}
 }
 
-@mixin bp($bp: 0) {
-	@media (min-width: $bp) {
+@mixin bp($maxBp: 100, $minBp: 0) {
+	@media (min-width: $minBp) and (max-width: $maxBp) {
 		@content;
 	}
 }

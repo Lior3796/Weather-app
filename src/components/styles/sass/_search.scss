@@ -1,24 +1,32 @@
 .search-container {
+	@media #{$sm} {
+		// clamp(100%, 10vw, 150px);
+	}
 	@include flex-center(column, center, space-around);
 	flex: 0.39;
 	width: 100%;
-	font-family: "Courier New", Courier, monospace;
 	h3 {
 		text-align: center;
 	}
 	.search-bar {
 		@include flex-center(row, center, space-around);
+		@media #{$sm} {
+			min-width: 60%;
+		}
 		margin: 1.7rem;
 		width: 100%;
 		padding-top: 15px;
 		input[type="text"] {
+			@media #{$sm} {
+				// clamp(100%, 10vw, 150px);
+			}
 			font-size: 2rem;
 		}
 		.search-input {
+			max-width: clamp(50%, 200px, 30vw);
+			max-height: 50px;
 			background-size: black;
-			width: 50%;
-			min-width: 150px;
-			height: 50px;
+
 			border: none;
 			outline: none;
 			padding: 0px 25px;
@@ -26,9 +34,8 @@
 		}
 		.search-button {
 			position: relative;
-			width: 10%;
-			min-width: 50px;
-			height: 50px;
+			min-width: clamp(10%, 3vw, 50px);
+			max-height: 50px;
 			border: none;
 			outline: none;
 			cursor: pointer;

@@ -20,42 +20,11 @@
   overflow-x: hidden;
 }
 
-.container, .light, .dark {
-  width: 100%;
-  height: 100vh;
-  overflow-x: hidden;
-}
-
-@media (min-width: 0px) {
+@media (min-width: 0px) and (max-width: 460px) {
   .container, .light, .dark {
-    height: 200vh;
-  }
-}
-
-@media (min-width: 460px) {
-  .container, .light, .dark {
-    height: 200vh;
-  }
-}
-
-@media (min-width: 720px) {
-  .container, .light, .dark {
-    font-size: 2rem;
-    height: 150vh;
-  }
-}
-
-@media (min-width: 960px) {
-  .container, .light, .dark {
-    font-size: 2rem;
-    height: 100vh;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container, .light, .dark {
-    font-size: 2rem;
-    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    height: 250vh;
   }
 }
 
@@ -167,59 +136,6 @@
   color: white;
 }
 
-@media (min-width: 0px) {
-  .navbar-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-@media (min-width: 460px) {
-  .navbar-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-@media (min-width: 1200px) {
-  .navbar-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
 .navbar-container .navbar-ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -303,170 +219,64 @@
 }
 
 .weather-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  height: 100%;
-}
-
-@media (min-width: 0px) {
-  .weather-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-@media (min-width: 460px) {
-  .weather-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-@media (min-width: 720px) {
-  .weather-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: 960px) {
-  .weather-container {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .weather-container {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: 0px) {
-  .forecasts-map-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-@media (min-width: 460px) {
-  .forecasts-map-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-@media (min-width: 720px) {
-  .forecasts-map-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: 960px) {
-  .forecasts-map-container {
-    font-size: 2rem;
-  }
-}
-
-.favorite-container {
   position: relative;
-  height: calc(100vh - 60px);
 }
 
-.forecasts-map-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+@media (min-width: 0px) and (max-width: 460px) {
+  .weather-container {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 460px) {
+  .forecasts-map-container-weather {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 39%;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 460px) {
+  .favorite-container {
+    height: 100%;
+    position: relative;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 460px) {
+  .forecasts-map-container-favorite {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 460px) {
+  .favoriteCard {
+    width: 70%;
+    height: 10%;
+  }
 }
 
 @keyframes backgroundAnimation {
@@ -500,7 +310,6 @@
       -ms-flex: 0.39;
           flex: 0.39;
   width: 100%;
-  font-family: "Courier New", Courier, monospace;
 }
 
 .search-container h3 {
@@ -526,15 +335,20 @@
   padding-top: 15px;
 }
 
+@media (min-width: 0px) and (max-width: 460px) {
+  .search-container .search-bar {
+    min-width: 60%;
+  }
+}
+
 .search-container .search-bar input[type="text"] {
   font-size: 2rem;
 }
 
 .search-container .search-bar .search-input {
+  max-width: clamp(50%, 200px, 30vw);
+  max-height: 50px;
   background-size: black;
-  width: 50%;
-  min-width: 150px;
-  height: 50px;
   border: none;
   outline: none;
   padding: 0px 25px;
@@ -543,178 +357,13 @@
 
 .search-container .search-bar .search-button {
   position: relative;
-  width: 10%;
-  min-width: 50px;
-  height: 50px;
+  min-width: clamp(10%, 3vw, 50px);
+  max-height: 50px;
   border: none;
   outline: none;
   cursor: pointer;
   background-color: #ffc107;
   color: #fff;
-}
-
-.forecasts-map-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100%;
-  -webkit-box-flex: 1.4;
-      -ms-flex: 1.4;
-          flex: 1.4;
-}
-
-@media (min-width: 0px) {
-  .forecasts-map-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    height: 100%;
-  }
-}
-
-@media (min-width: 460px) {
-  .forecasts-map-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-@media (min-width: 720px) {
-  .forecasts-map-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-@media (min-width: 960px) {
-  .forecasts-map-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
-@media (min-width: 1200px) {
-  .forecasts-map-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    width: 100%;
-  }
-}
-
-.forecasts-map-container .favoriteCard {
-  width: 30%;
-  border: 1px solid black;
-  max-height: 300px;
-  max-width: 250px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.forecasts-map-container .favoriteCard * > div {
-  height: 7rem;
-}
-
-@media (min-width: 0px) {
-  .forecasts-map-container .favoriteCard {
-    width: 70%;
-  }
-}
-
-@media (min-width: 460px) {
-  .forecasts-map-container .favoriteCard {
-    width: 70%;
-  }
-}
-
-@media (min-width: 720px) {
-  .forecasts-map-container .favoriteCard {
-    width: 30%;
-  }
-}
-
-@media (min-width: 960px) {
-  .forecasts-map-container .favoriteCard {
-    width: 25%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .forecasts-map-container .favoriteCard {
-    width: 100%;
-  }
 }
 
 .Footer-container {
@@ -732,6 +381,12 @@
       -ms-flex-align: center;
           align-items: center;
   scroll-snap-align: start;
+}
+
+@media (min-width: 0px) and (max-width: 460px), (min-width: 461px) and (max-width: 720px) {
+  .Footer-container {
+    font-size: 3rem;
+  }
 }
 
 .Footer-links {
@@ -821,54 +476,37 @@
           filter: grayscale(100%);
 }
 
-.ForecastsCard-container {
-  max-width: 350px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-}
-
-@media (min-width: 0px) {
-  .ForecastsCard-container {
-    width: 80%;
-  }
-}
-
-@media (min-width: 460px) {
-  .ForecastsCard-container {
-    width: 80%;
-  }
-}
-
-@media (min-width: 720px) {
-  .ForecastsCard-container {
-    width: 60%;
-  }
-}
-
-@media (min-width: 960px) {
-  .ForecastsCard-container {
-    width: 40%;
-  }
-}
-
-@media (min-width: 1200px) {
+@media (min-width: 0px) and (max-width: 460px) {
   .ForecastsCard-container {
     width: 100%;
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
 .ForecastsCard {
-  width: 80%;
-  min-height: 170px;
-  max-width: 350px;
   border-radius: 10px;
   position: relative;
   -webkit-box-shadow: 10px 10px 10px 10px black;
           box-shadow: 10px 10px 10px 10px black;
+}
+
+@media (min-width: 0px) and (max-width: 460px) {
+  .ForecastsCard {
+    width: 80%;
+    height: 40%;
+  }
 }
 
 .weather-icon-PM {

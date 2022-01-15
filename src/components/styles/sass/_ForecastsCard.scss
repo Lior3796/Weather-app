@@ -1,32 +1,18 @@
 .ForecastsCard-container {
-	max-width: 350px;
-	display: flex;
-	justify-content: start;
-	@include base {
-		width: 80%;
-	}
-	@include sm {
-		width: 80%;
-	}
-	@include md {
-		width: 60%;
-	}
-
-	@include lg {
-		width: 40%;
-	}
-
-	@include xl {
+	@media #{$sm} {
 		width: 100%;
+		height: 50%;
+		@include flex-center(column, space-around, center);
 	}
 }
 .ForecastsCard {
-	width: 80%;
-	min-height: 170px;
-	max-width: 350px;
 	border-radius: 10px;
 	position: relative;
 	box-shadow: 10px 10px 10px 10px black;
+	@media #{$sm} {
+		width: 80%;
+		height: 40%;
+	}
 }
 
 .weather-icon-PM {

@@ -5,6 +5,8 @@ import { FavoriteCard } from '../features/favoriteCard/FavoriteCard';
 import { getCityWeather } from '../service/service';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Footer } from "../features/footer/Footer";
+
 
 export const Favorites = () => {
     const cities = useSelector(state => state.favoriteReducer);
@@ -41,13 +43,15 @@ export const Favorites = () => {
 
     return (
         <div className="favorite-container">
-            <div className="forecasts-map-container">
-                <h1 className="header">Here is your favorite weather:</h1>
+            <h1 className="header">Here is your favorite weather:</h1>
+
+            <div className="forecasts-map-container-favorite">
                 {
                     cities?.map((city, key) => <FavoriteCard currentWeather={favorites} city={city} key={key} />)
                 }
             </div>
             <ToastContainer />
+            <Footer />
         </div>
     )
 }

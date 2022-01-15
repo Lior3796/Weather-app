@@ -1,4 +1,7 @@
 .Footer-container {
+	@media #{$sm},#{$md} {
+		font-size: 3rem;
+	}
 	position: absolute;
 	bottom: 0;
 	width: 100%;

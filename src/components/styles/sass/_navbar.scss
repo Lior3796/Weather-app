@@ -14,16 +14,6 @@
 		color: white;
 	}
 
-	@include base {
-		@include flex-center(row, space-evenly);
-	}
-	@include sm {
-		@include flex-center(row, space-evenly);
-	}
-	@include xl {
-		@include flex-center(row, space-around);
-	}
-
 	.navbar-ul {
 		@include flex-center(row, flex-end);
 		margin-right: 25px;

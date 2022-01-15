@@ -13,28 +13,10 @@
 }
 
 .container {
-	width: 100%;
-	height: 100vh;
-	overflow-x: hidden;
-	@include base {
-		height: 200vh;
-	}
-	@include sm {
-		height: 200vh;
-	}
-	@include md {
-		font-size: 2rem;
-		height: 150vh;
-	}
-
-	@include lg {
-		font-size: 2rem;
-		height: 100vh;
-	}
-
-	@include xl {
-		font-size: 2rem;
-		height: 100vh;
+	@media #{$sm} {
+		width: 100%;
+		overflow-x: hidden;
+		height: 250vh;
 	}
 }
 .light {
