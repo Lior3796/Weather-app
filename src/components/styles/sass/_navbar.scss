@@ -1,36 +1,33 @@
 .navbar-container {
 	@include stickyNav;
 	@include flex-center(row, space-around);
-	@media #{$sm},#{$lg} {
+	@media #{$sm},#{$lg},#{$md} {
 		font-size: 2rem;
-	}
-	height: 10vh;
-	width: 100%;
-	z-index: 10;
-	h1 {
-		width: 200px;
-		text-align: end;
-	}
-
-	a,
-	h1 {
-		color: white;
-	}
-
-	.navbar-ul {
-		@include flex-center(row, flex-end);
-		margin-right: 25px;
+		height: 10vh;
 		width: 100%;
+		z-index: 10;
 	}
-	.navbar-li {
+}
+.navbar-ul {
+	@media #{$sm},#{$lg},#{$md} {
+		@include flex-center(row, flex-end);
+		width: 50%;
+	}
+}
+.navbar-li {
+	@media #{$sm},#{$lg},#{$md} {
 		margin: 0.5rem;
 	}
-	.toggle-container-dark {
+}
+.toggle-container-dark {
+	@media #{$sm},#{$lg},#{$md} {
 		@include dark;
 		max-height: 50px;
 		font-size: 3rem;
 	}
-	.toggle-container-light {
+}
+.toggle-container-light {
+	@media #{$sm},#{$lg},#{$md} {
 		@include light;
 		font-size: 3rem;
 		max-height: 50px;

@@ -7,5 +7,7 @@
 	}
 }
 .text-container {
-	width: 10%;
+	@media #{$sm},#{$lg},#{$md} {
+		width: 10%;
+	}
 }

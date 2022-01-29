@@ -12,6 +12,7 @@ import '../../styles/style.css';
 import Sidebar from '../sidebar/Sidebar';
 import { Header } from '../header/Header';
 import { checkWindowWidth } from '../../utills/Index';
+import { Footer } from '../footer/Footer';
 
 
 export const AppRouter = () => {
@@ -33,6 +34,7 @@ export const AppRouter = () => {
                     <Route path="/Weather-app/favorites" exact element={<Favorites />} />
 
                 </Routes>
+                <Footer />
             </>
         </Router >
     )

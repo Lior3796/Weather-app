@@ -1,50 +1,68 @@
 .ForecastsCard-container {
 	@media #{$sm} {
 		width: 100%;
-		height: 50%;
+		height: 40%;
 		@include flex-center(column, space-around, center);
 	}
 	@media #{$lg} {
 		@include flex-center(row, space-around, center);
-		width: 28%;
-		height: 50%;
+		width: 27%;
+		height: 22%;
+	}
+	@media #{$md} {
+		height: 25%;
 	}
 }
 .ForecastsCard {
-	border-radius: 10px;
-	position: relative;
-	box-shadow: 10px 10px 10px 10px black;
 	@media #{$sm} {
 		width: 80%;
-		height: 40%;
+		height: 50%;
 	}
-	@media #{$lg} {
+	@media #{$lg},#{$md} {
 		width: 100%;
-		height: 40%;
+		height: 100%;
+	}
+	@media #{$sm},#{$lg},#{$md} {
+		border-radius: 10px;
+		position: relative;
+		box-shadow: 10px 10px 10px 10px black;
 	}
 }
 
 .weather-icon-PM {
 	@extend .weather-icon;
-	color: black;
+	@media #{$sm},#{$lg},#{$md} {
+		color: black;
+	}
 }
 .weather-icon-AM {
 	@extend .weather-icon;
-	color: yellow;
+	@media #{$sm},#{$lg},#{$md} {
+		color: yellow;
+	}
 }
 .card-content {
-	width: 60%;
-	font-family: "Assistant";
+	@media #{$sm},#{$lg},#{$md} {
+		width: 60%;
+		font-family: "Assistant";
+	}
 }
 .night_bg {
-	background: #0f2129;
+	@media #{$sm},#{$lg},#{$md} {
+		background: #0f2129;
+	}
 }
 .frosty_bg {
-	background: #29386f;
+	@media #{$sm},#{$lg},#{$md} {
+		background: #29386f;
+	}
 }
 .sunny_bg {
-	background: #ffbd3f;
+	@media #{$sm},#{$lg},#{$md} {
+		background: #ffbd3f;
+	}
 }
+// curves
 .custom-shape-divider-bottom-1637765530 {
 	position: absolute;
 	bottom: 0;

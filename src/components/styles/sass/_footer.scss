@@ -1,59 +1,112 @@
 .Footer-container {
-	@media #{$sm},#{$lg} {
+	@media #{$lg} {
 		font-size: 3rem;
 	}
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
+	@media #{$sm} {
+		font-size: 1rem;
+	}
+	@media #{$sm},#{$lg},#{$md} {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
 }
 .Footer-links {
-	display: grid;
-	gap: 10px;
-	border-bottom: 1px solid gray;
-	padding: 25px;
-	width: 100%;
-	grid-template-columns: 100px repeat(4, 1fr);
+	@media #{$lg} {
+	}
+	@media #{$sm} {
+	}
+	@media #{$sm},#{$lg},#{$md} {
+		display: grid;
+		gap: 10px;
+		border-bottom: 1px solid gray;
+		padding: 25px;
+		width: 100%;
+		grid-template-columns: 100px repeat(4, 1fr);
+	}
 }
 .footer-ul {
-	display: flex;
-	justify-content: space-between;
-	flex-direction: column;
-	height: 100%;
-	color: white;
-	list-style: none;
-	cursor: pointer;
+	@media #{$lg} {
+	}
+	@media #{$sm} {
+	}
+	@media #{$sm},#{$lg},#{$md} {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		height: 100%;
+		color: white;
+		list-style: none;
+		cursor: pointer;
+	}
 }
 .footer-ul > li {
-	font-weight: 100;
-	height: 20px;
-	font-size: medium;
+	@media #{$lg} {
+	}
+	@media #{$sm} {
+	}
+	@media #{$sm},#{$lg},#{$md} {
+		font-weight: 100;
+		height: 20px;
+		font-size: medium;
+	}
 }
 .olympic-info {
-	width: 80%;
+	@media #{$lg} {
+	}
+	@media #{$sm} {
+	}
+	@media #{$sm},#{$lg},#{$md} {
+		width: 80%;
+	}
 }
 .olympic-info > ul {
-	display: flex;
-	justify-content: space-around;
-	color: white;
-	list-style: none;
-	cursor: pointer;
-	width: 100%;
+	@media #{$lg} {
+	}
+	@media #{$sm} {
+	}
+	@media #{$sm},#{$lg},#{$md} {
+		display: flex;
+		justify-content: space-around;
+		color: white;
+		list-style: none;
+		cursor: pointer;
+		width: 100%;
+	}
 }
 .social-links {
-	width: 100%;
-	z-index: 10;
-	height: 30%;
+	@media #{$lg} {
+	}
+	@media #{$sm} {
+	}
+	@media #{$sm},#{$lg},#{$md} {
+		width: 100%;
+		z-index: 10;
+		height: 30%;
+	}
 }
 .social-links > div {
-	margin: auto;
-	display: flex;
-	justify-content: space-around;
-	width: 40%;
+	@media #{$lg} {
+	}
+	@media #{$sm} {
+	}
+	@media #{$sm},#{$lg},#{$md} {
+		margin: auto;
+		display: flex;
+		justify-content: space-around;
+		width: 40%;
+	}
 }
 .social-links > div > a {
-	font-size: 25px;
-	color: white;
+	@media #{$lg} {
+	}
+	@media #{$sm} {
+	}
+	@media #{$sm},#{$lg},#{$md} {
+		font-size: 25px;
+		color: white;
+	}
 }

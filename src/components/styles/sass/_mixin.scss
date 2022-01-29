@@ -77,42 +77,29 @@
 	}
 }
 @mixin stickyNav {
-	position: absolute;
+	position: fixed;
+	background-color: white;
 	top: 0;
 }
+@mixin search-input {
+	width: 30%;
+	min-width: 200px;
+	max-height: $search-bar-height;
+	background-size: black;
+	border: none;
+	outline: none;
+	padding: 0px 25px;
+	border-radius: 25px 0 0 25px;
+}
+@mixin search-button {
+	position: relative;
+	width: 10%;
+	min-width: 100px;
+	max-height: $search-bar-height;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-color: #ffc107;
+	color: #fff;
+}
 // media query
-@mixin base {
-	@media (min-width: map-get($break-points,"base")) {
-		@content;
-	}
-}
-
-@mixin sm {
-	@media (min-width: map-get($break-points,"sm")) {
-		@content;
-	}
-}
-
-@mixin md {
-	@media (min-width: map-get($break-points,"md")) {
-		@content;
-	}
-}
-
-@mixin lg {
-	@media (min-width: map-get($break-points,"lg")) {
-		@content;
-	}
-}
-
-@mixin xl {
-	@media (min-width: map-get($break-points,"xl")) {
-		@content;
-	}
-}
-
-@mixin bp($maxBp: 100, $minBp: 0) {
-	@media (min-width: $minBp) and (max-width: $maxBp) {
-		@content;
-	}
-}

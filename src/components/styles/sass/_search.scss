@@ -1,46 +1,28 @@
 .search-container {
-	@media #{$sm} {
-		// clamp(100%, 10vw, 150px);
-	}
-	@include flex-center(column, center, space-around);
-	flex: 0.39;
-	width: 100%;
-	h3 {
-		text-align: center;
-	}
-	.search-bar {
-		@include flex-center(row, center, space-around);
-		@media #{$sm} {
-			min-width: 60%;
-		}
+	@media #{$sm},#{$lg},#{$md} {
+		@include flex-center(column, center, space-around);
+		flex: 0.39;
+		width: 100%;
 		margin: 1.7rem;
+	}
+}
+.search-bar {
+	@include flex-center(row, center, space-around);
+	@media #{$sm} {
+		min-width: 60%;
+	}
+	@media #{$lg} {
+		min-width: 60%;
+	}
+	@media #{$sm},#{$lg},#{$md} {
+		min-height: 40px;
 		width: 100%;
 		padding-top: 15px;
-		input[type="text"] {
-			@media #{$sm} {
-				// clamp(100%, 10vw, 150px);
-			}
-			font-size: 2rem;
-		}
-		.search-input {
-			max-width: clamp(50%, 200px, 30vw);
-			max-height: 50px;
-			background-size: black;
-
-			border: none;
-			outline: none;
-			padding: 0px 25px;
-			border-radius: 25px 0 0 25px;
-		}
-		.search-button {
-			position: relative;
-			min-width: clamp(10%, 3vw, 50px);
-			max-height: 50px;
-			border: none;
-			outline: none;
-			cursor: pointer;
-			background-color: #ffc107;
-			color: #fff;
-		}
 	}
+}
+.search-input {
+	@include search-input;
+}
+.search-button {
+	@include search-button;
 }

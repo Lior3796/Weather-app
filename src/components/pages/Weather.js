@@ -8,7 +8,7 @@ import { ForecastsCard } from '../features/forecastsCard/ForecastsCard';
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Footer } from "../features/footer/Footer";
+
 
 export const Weather = () => {
     const { Key } = useSelector(state => state.cityReducer);
@@ -50,7 +50,7 @@ export const Weather = () => {
                 {showForecasts(forecastsReducer)}
                 <ToastContainer />
             </div>
-            <Footer />
+
         </div>
     )
 }

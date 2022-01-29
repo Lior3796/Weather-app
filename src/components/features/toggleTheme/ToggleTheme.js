@@ -11,11 +11,10 @@ export const ToggleTheme = () => {
     const handleChange = () => {
         setTheme(!theme);
         dispatch({ type: CHANGE_THEME, payload: theme });
-        console.log("clicked")
     };
 
     return (
-        <Button onClick={handleChange} >Change theme</Button>
+        <Button sx={{ fontSize: 20 }} onClick={handleChange} >{theme ? "Dark" : "Light"}</Button>
     );
 
 

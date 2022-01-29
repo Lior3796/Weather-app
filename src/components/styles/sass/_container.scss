@@ -9,20 +9,22 @@
 	font-size: $root-font-size;
 	text-decoration: none;
 	box-sizing: border-box;
-	overflow-x: hidden;
 }
 
 .container {
-	@media #{$sm} {
-		width: 100%;
+	@media #{$sm},#{$lg},#{$md} {
 		overflow-x: hidden;
+		width: 100%;
+		position: relative;
+	}
+	@media #{$sm} {
 		height: 250vh;
 	}
+	@media #{$md} {
+		height: 100vh;
+	}
 	@media #{$lg} {
-		width: 100%;
 		height: 150vh;
-		overflow-x: hidden;
-		border: 1px solid black;
 	}
 }
 .light {
