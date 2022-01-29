@@ -9,6 +9,15 @@
 	font-size: $root-font-size;
 	text-decoration: none;
 	box-sizing: border-box;
+	@media #{$sm} {
+		font-size: 7px;
+	}
+	@media #{$md} {
+		font-size: 8px;
+	}
+	@media #{$lg} {
+		font-size: $root-font-size;
+	}
 }
 
 .container {
