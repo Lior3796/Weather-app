@@ -350,8 +350,8 @@
 
 @media (min-width: 721px) {
   .favorite-container {
-    overflow-x: hidden;
-    height: 150vh;
+    overflow-y: hidden;
+    height: 100%;
     width: 90vw;
     margin: auto;
   }
@@ -365,9 +365,8 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -407,9 +406,15 @@
   }
 }
 
+@media (min-width: 461px) and (max-width: 720px) {
+  .favoriteCard {
+    width: 80%;
+    height: 10%;
+  }
+}
+
 @media (min-width: 721px) {
   .favoriteCard {
-    width: 100%;
     width: 30%;
     height: 20%;
   }
@@ -522,7 +527,7 @@
 
 @media (min-width: 0px) and (max-width: 460px) {
   .Footer-container {
-    font-size: 1rem;
+    font-size: 5rem;
   }
 }
 

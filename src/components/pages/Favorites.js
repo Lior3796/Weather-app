@@ -51,7 +51,7 @@ export const Favorites = () => {
                 }
             </div>
             <ToastContainer />
-            <Footer />
+
         </div>
     )
 }

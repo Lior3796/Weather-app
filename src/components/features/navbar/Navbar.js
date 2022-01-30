@@ -15,10 +15,10 @@ export const Navbar = () => {
             <ul className="navbar-ul">
 
                 <li className="navbar-li">
-                    <Link className="navbar-link" to="/weather-app"> Weather </Link>
+                    <Link className="navbar-link" to="/Weather-app"> Weather </Link>
                 </li>
                 <li className="navbar-li">
-                    <Link className="navbar-link" to="/weather-app/favorites"> Favorites </Link>
+                    <Link className="navbar-link" to="/Weather-app/favorites"> Favorites </Link>
                 </li>
             </ul>
             <Buttons />

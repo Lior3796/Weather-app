@@ -26,8 +26,8 @@ export default function Sidebar() {
     };
 
     const sidebarsLinks = [
-        { pathname: "/weather-app/favorites", text: "favorite" },
-        { pathname: "/weather-app", text: "weather" },
+        { pathname: "/Weather-app/favorites", text: "favorite" },
+        { pathname: "/Weather-app", text: "weather" },
     ]
 
     const list = (anchor) => (
