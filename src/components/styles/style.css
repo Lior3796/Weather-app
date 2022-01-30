@@ -590,13 +590,13 @@
 }
 
 @media (min-width: 0px) and (max-width: 460px), (min-width: 721px), (min-width: 461px) and (max-width: 720px) {
-  .olympic-info {
+  .social-info {
     width: 80%;
   }
 }
 
 @media (min-width: 0px) and (max-width: 460px), (min-width: 721px), (min-width: 461px) and (max-width: 720px) {
-  .olympic-info > ul {
+  .social-info > ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

@@ -29,10 +29,6 @@
 	}
 }
 .footer-ul {
-	@media #{$lg} {
-	}
-	@media #{$sm} {
-	}
 	@media #{$sm},#{$lg},#{$md} {
 		display: flex;
 		justify-content: space-between;
@@ -44,30 +40,18 @@
 	}
 }
 .footer-ul > li {
-	@media #{$lg} {
-	}
-	@media #{$sm} {
-	}
 	@media #{$sm},#{$lg},#{$md} {
 		font-weight: 100;
 		height: 20px;
 		font-size: medium;
 	}
 }
-.olympic-info {
-	@media #{$lg} {
-	}
-	@media #{$sm} {
-	}
+.social-info {
 	@media #{$sm},#{$lg},#{$md} {
 		width: 80%;
 	}
 }
-.olympic-info > ul {
-	@media #{$lg} {
-	}
-	@media #{$sm} {
-	}
+.social-info > ul {
 	@media #{$sm},#{$lg},#{$md} {
 		display: flex;
 		justify-content: space-around;
@@ -78,10 +62,6 @@
 	}
 }
 .social-links {
-	@media #{$lg} {
-	}
-	@media #{$sm} {
-	}
 	@media #{$sm},#{$lg},#{$md} {
 		width: 100%;
 		z-index: 10;
@@ -101,10 +81,6 @@
 	}
 }
 .social-links > div > a {
-	@media #{$lg} {
-	}
-	@media #{$sm} {
-	}
 	@media #{$sm},#{$lg},#{$md} {
 		font-size: 25px;
 		color: white;
