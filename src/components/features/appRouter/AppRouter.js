@@ -22,20 +22,20 @@ export const AppRouter = () => {
         window.addEventListener("resize", () => setWindowWidth(window.innerWidth));
     }, [])
     return (
-        <Router>
-            <>
-                <div className={checkWindowWidth(windowWidth) && "layout-container"} >
-                    {checkWindowWidth(windowWidth) ? <Sidebar /> : <Navbar />}
 
-                </div>
-                <Routes>
-                    <Route path="/" exact element={<Weather />} />
-                    <Route path="/Weather-app" exact element={<Weather />} />
-                    <Route path="/Weather-app/favorites" exact element={<Favorites />} />
+        <>
+            <div className={checkWindowWidth(windowWidth) && "layout-container"} >
+                {checkWindowWidth(windowWidth) ? <Sidebar /> : <Navbar />}
 
-                </Routes>
-                <Footer />
-            </>
-        </Router >
+            </div>
+            <Routes>
+                <Route path="/" exact element={<Weather />} />
+                <Route path="/Weather-app" exact element={<Weather />} />
+                <Route path="/Weather-app/favorites" exact element={<Favorites />} />
+
+            </Routes>
+            <Footer />
+        </>
+
     )
 }
