@@ -145,9 +145,15 @@
   }
 }
 
-@media (min-width: 0px) and (max-width: 460px), (min-width: 721px), (min-width: 461px) and (max-width: 720px) {
+@media (min-width: 721px), (min-width: 461px) and (max-width: 720px) {
   .text-container {
     width: 10%;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 460px) {
+  .text-container {
+    width: 100%;
   }
 }
 
@@ -429,9 +435,15 @@
   }
 }
 
-@media (min-width: 0px) and (max-width: 460px), (min-width: 721px), (min-width: 461px) and (max-width: 720px) {
+@media (min-width: 721px), (min-width: 461px) and (max-width: 720px) {
   .text-container {
     width: 10%;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 460px) {
+  .text-container {
+    width: 100%;
   }
 }
 

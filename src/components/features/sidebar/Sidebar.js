@@ -40,10 +40,6 @@ export default function Sidebar() {
 
             <List >
                 {sidebarsLinks.map((link, key) => <Link key={key} pathname={link.pathname} text={link.text} />)}
-                <ToggleTheme />
-                <ToggleUnit />
-                <AddButton />
-                <RemoveButton />
             </List>
             <Header favoriteCity={favoriteCity} />
 

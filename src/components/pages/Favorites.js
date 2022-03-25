@@ -5,7 +5,7 @@ import { FavoriteCard } from '../features/favoriteCard/FavoriteCard';
 import { getCityWeather } from '../service/service';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Footer } from "../features/footer/Footer";
+
 
 
 export const Favorites = () => {
@@ -51,7 +51,6 @@ export const Favorites = () => {
                 }
             </div>
             <ToastContainer />
-
         </div>
     )
 }
