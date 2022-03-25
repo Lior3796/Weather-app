@@ -22,23 +22,7 @@ export const getCoordinates = (Key) => {
         .catch(err => console.log(err))
 }
 
-export const getEvents = () => {
-    return fetch("https://app.ticketmaster.com/discovery/v2/events.json?size=7&keyword=Ed&apikey=9Fe3TiZMSanrQ1TnmPuhrc7bW0q6if13")
-        .then(res => res.json())
-        .catch(err => console.log(err))
-}
 
-export const getEventByAttraction = (keyword) => {
-    return fetch(`https://app.ticketmaster.com/discovery/v2/attractions?apikey=9Fe3TiZMSanrQ1TnmPuhrc7bW0q6if13&keyword=${keyword}&locale=*&size=6&preferredCountry=us`)
-        .then(attraction => attraction.json())
-        .catch(err => console.log(err))
-}
-
-export const getUserEvent = (keyword) => {
-    return fetch(`https://app.ticketmaster.com/discovery/v2/attractions?apikey=9Fe3TiZMSanrQ1TnmPuhrc7bW0q6if13&keyword=${keyword}&locale=*&size=6&preferredCountry=us`)
-        .then(attraction => attraction.json())
-        .catch(err => console.log(err))
-}
 
 
 
